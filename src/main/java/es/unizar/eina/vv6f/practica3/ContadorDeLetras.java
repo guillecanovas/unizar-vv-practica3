@@ -23,6 +23,7 @@ import java.io.FileReader;
  *
  */
 public class ContadorDeLetras {
+    public static final int NUM_LETRAS = 27;
     private File fichero;
     private int[] frecuencias = null;
 
@@ -51,7 +52,7 @@ public class ContadorDeLetras {
      */
     public int[] frecuencias() throws FileNotFoundException {
         if (frecuencias == null) {
-            frecuencias = new int[27];
+            frecuencias = new int[NUM_LETRAS];
             try {
                 FileReader fr = new FileReader(this.fichero);
                 BufferedReader br = new BufferedReader(new FileReader(this.fichero));
@@ -60,9 +61,9 @@ public class ContadorDeLetras {
                     for (int i = 0; i < linea.length(); i++) {
                         char letra = linea.charAt(i);
                         if (letra == 'Ñ') { //las tratamos aqui porque el normalize las transforma a N
-                            frecuencias[26]++;
+                            frecuencias[NUM_LETRAS - 1]++;
                         } else if (letra == 'ñ') { //las tratamos aqui porque el normalize las transforma a n
-                            frecuencias[26]++;
+                            frecuencias[NUM_LETRAS - 1]++;
                         } else if (letra == 'ª') { //el normalize no los transforma bien
                             int indice = 'a' - 'a';
                             frecuencias[indice]++;

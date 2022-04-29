@@ -17,7 +17,7 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
         assertArrayEquals(resultado,frecuencias_fichero);
     }
 
@@ -43,8 +43,8 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
-        for(int i=0; i<26; i++){
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
+        for(int i=0; i < ContadorDeLetras.NUM_LETRAS - 1; i++){
             resultado[i]=1;
         }
         assertArrayEquals(resultado,frecuencias_fichero);
@@ -56,8 +56,8 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
-        for(int i=0; i<26; i++){
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
+        for(int i=0; i < ContadorDeLetras.NUM_LETRAS - 1; i++){
             resultado[i]=1;
         }
         assertArrayEquals(resultado,frecuencias_fichero);
@@ -69,8 +69,8 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
-        resultado[26] = 1;
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
+        resultado[ContadorDeLetras.NUM_LETRAS - 1] = 1;
         assertArrayEquals(resultado,frecuencias_fichero);
     }
 
@@ -80,8 +80,8 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
-        resultado[26] = 1;
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
+        resultado[ContadorDeLetras.NUM_LETRAS - 1] = 1;
         assertArrayEquals(resultado,frecuencias_fichero);
     }
 
@@ -91,7 +91,7 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
         resultado[0] = 1;
         resultado[4] = 1;
         resultado[8] = 1;
@@ -106,7 +106,7 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
         resultado[0] = 1;
         resultado[4] = 1;
         resultado[8] = 1;
@@ -121,7 +121,7 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
         for (int i=0;i<resultado.length;++i){ resultado[i]=0;}
         resultado[0] = 1;
         resultado[4] = 1;
@@ -137,7 +137,7 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
         resultado[0] = 1;
         resultado[4] = 1;
         resultado[8] = 1;
@@ -152,7 +152,7 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
         resultado[0] = 2;
         assertArrayEquals(resultado,frecuencias_fichero);
     }
@@ -163,7 +163,7 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
         resultado[0] = 1;
         resultado[14] = 1;
         assertArrayEquals(resultado,frecuencias_fichero);
@@ -176,7 +176,7 @@ public class TestContadorDeLetras {
         File f = new File(path + ficheroEntrada);
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
-        int[] resultado = new int[27];
+        int[] resultado = new int[ContadorDeLetras.NUM_LETRAS];
         assertArrayEquals(resultado,frecuencias_fichero);
     }
 
