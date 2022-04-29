@@ -18,7 +18,7 @@ public class TestContadorDeLetras {
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
         int[] resultado = new int[27];
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class TestContadorDeLetras {
         for(int i=0; i<26; i++){
             resultado[i]=1;
         }
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
     }
 
     @Test
@@ -60,7 +60,7 @@ public class TestContadorDeLetras {
         for(int i=0; i<26; i++){
             resultado[i]=1;
         }
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
     }
 
     @Test
@@ -71,7 +71,7 @@ public class TestContadorDeLetras {
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
         int[] resultado = new int[27];
         resultado[26] = 1;
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
     }
 
     @Test
@@ -82,7 +82,7 @@ public class TestContadorDeLetras {
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
         int[] resultado = new int[27];
         resultado[26] = 1;
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
     }
 
     @Test
@@ -97,7 +97,7 @@ public class TestContadorDeLetras {
         resultado[8] = 1;
         resultado[14] = 1;
         resultado[20] = 1;
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
     }
 
     @Test
@@ -112,7 +112,7 @@ public class TestContadorDeLetras {
         resultado[8] = 1;
         resultado[14] = 1;
         resultado[20] = 1;
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
     }
 
     @Test
@@ -128,7 +128,7 @@ public class TestContadorDeLetras {
         resultado[8] = 1;
         resultado[14] = 1;
         resultado[20] = 1;
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
     }
 
     @Test
@@ -143,7 +143,7 @@ public class TestContadorDeLetras {
         resultado[8] = 1;
         resultado[14] = 1;
         resultado[20] = 1;
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
     }
 
     @Test
@@ -154,7 +154,7 @@ public class TestContadorDeLetras {
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
         int[] resultado = new int[27];
         resultado[0] = 2;
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
     }
 
     @Test
@@ -166,7 +166,7 @@ public class TestContadorDeLetras {
         int[] resultado = new int[27];
         resultado[0] = 1;
         resultado[14] = 1;
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
 
     }
 
@@ -177,7 +177,7 @@ public class TestContadorDeLetras {
         contadorDeLetras = new ContadorDeLetras(f);
         int[] frecuencias_fichero = contadorDeLetras.frecuencias();
         int[] resultado = new int[27];
-        assertArrayEquals(frecuencias_fichero,resultado);
+        assertArrayEquals(resultado,frecuencias_fichero);
     }
 
 }
