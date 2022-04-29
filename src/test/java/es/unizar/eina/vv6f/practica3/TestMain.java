@@ -43,49 +43,27 @@ public class TestMain {
 
     @Test
     void HamletTest() throws IOException {
-        String fichero = path + "hamlet.txt";
-        byte[] numBytes = fichero.getBytes();
-        bInput = new ByteArrayInputStream(numBytes);
-
-        File salidaActual = new File(path + "out.txt");
-        FileOutputStream fos = new FileOutputStream(salidaActual);
-        File ficheroOutput = new File(testPath + "salida-hamlet.txt");
-        bOutput = new PrintStream(fos);
-
-        System.setIn(bInput);
-        System.setOut(bOutput);
-        Main.main(null);
-
-        comparar(ficheroOutput, salidaActual);
+        testFichero("hamlet.txt", "salida-hamlet.txt");
     }
 
     @Test
     void QuijoteTest() throws IOException {
-        String fichero = path + "quijote.txt";
-        byte[] numBytes = fichero.getBytes();
-        bInput = new ByteArrayInputStream(numBytes);
-
-        File salidaActual = new File(path + "out.txt");
-        FileOutputStream fos = new FileOutputStream(salidaActual);
-        File ficheroOutput = new File(testPath + "salida-quijote.txt");
-        bOutput = new PrintStream(fos);
-
-        System.setIn(bInput);
-        System.setOut(bOutput);
-        Main.main(null);
-
-        comparar(ficheroOutput, salidaActual);
+        testFichero("quijote.txt", "salida-quijote.txt");
     }
 
     @Test
     void RegentaTest() throws IOException {
-        String fichero = path + "regenta.txt";
+        testFichero("regenta.txt", "salida-regenta.txt");
+    }
+
+    private void testFichero(String ficheroEntrada, String ficheroResultados) throws IOException {
+        String fichero = path + ficheroEntrada;
         byte[] numBytes = fichero.getBytes();
         bInput = new ByteArrayInputStream(numBytes);
 
         File salidaActual = new File(path + "out.txt");
         FileOutputStream fos = new FileOutputStream(salidaActual);
-        File ficheroOutput = new File(testPath + "salida-regenta.txt");
+        File ficheroOutput = new File(testPath + ficheroResultados);
         bOutput = new PrintStream(fos);
 
         System.setIn(bInput);
